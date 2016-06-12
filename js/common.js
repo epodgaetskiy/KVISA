@@ -93,6 +93,7 @@ $(function() {
 	//scroll
 	$(".menu li a").mPageScroll2id();
 	$(".menu-mobile li a").mPageScroll2id();
+	$(".btn-registration").mPageScroll2id();
 
 	$(".discover-answer").click(function(e){
 		e.preventDefault();
@@ -153,7 +154,7 @@ $(function() {
 		$(".shadow").removeClass("active-shadow");
 	})
 
-	$(".btn-registration").click(function(e) {
+	$(".btn-registration-go").click(function(e) {
 		e.preventDefault();
 
 		$(".modal-registration").fadeIn(600);
@@ -185,5 +186,30 @@ $(function() {
 		choiseGame.removeClass("active");
 		choiseGame.eq(i).addClass("active");
 	})
+
+	//personal.html
+	//progress bar 
+	$('input[type="range"]').rangeslider({
+	    polyfill: false,
+	    onSlide: function(position, value) {
+	    	console.log(position);
+	    	console.log(value);
+	    }
+	  });
+
+	//iframe video play
+	var video = $('.video-container iframe');
+
+	video.iframeTracker({
+
+		blurCallback: function(){
+			$(".icon-play").fadeOut(0);
+		}
+	});
+
+	$(".icon-play").click(function(){
+		$(this).fadeOut(0);
+	})
+
 
 });

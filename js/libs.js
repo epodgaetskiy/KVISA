@@ -82,3 +82,170 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
  * License: MIT
  */
 !function(t,e){"function"==typeof define&&define.amd?define([],function(){return e()}):"object"==typeof exports?module.exports=e():t.Headhesive=e()}(this,function(){"use strict";var t=function(e,s){for(var o in s)s.hasOwnProperty(o)&&(e[o]="object"==typeof s[o]?t(e[o],s[o]):s[o]);return e},e=function(t,e){var s,o,i,n=Date.now||function(){return(new Date).getTime()},l=null,c=0,r=function(){c=n(),l=null,i=t.apply(s,o),s=o=null};return function(){var f=n(),h=e-(f-c);return s=this,o=arguments,0>=h?(clearTimeout(l),l=null,c=f,i=t.apply(s,o),s=o=null):l||(l=setTimeout(r,h)),i}},s=function(){return void 0!==window.pageYOffset?window.pageYOffset:(document.documentElement||document.body.parentNode||document.body).scrollTop},o=function(t,e){for(var s=0,o=t.offsetHeight;t;)s+=t.offsetTop,t=t.offsetParent;return"bottom"===e&&(s+=o),s},i=function(e,s){"querySelector"in document&&"addEventListener"in window&&(this.visible=!1,this.options={offset:300,offsetSide:"top",classes:{clone:"headhesive",stick:"headhesive--stick",unstick:"headhesive--unstick"},throttle:250,onInit:function(){},onStick:function(){},onUnstick:function(){},onDestroy:function(){}},this.elem="string"==typeof e?document.querySelector(e):e,this.options=t(this.options,s),this.init())};return i.prototype={constructor:i,init:function(){if(this.clonedElem=this.elem.cloneNode(!0),this.clonedElem.className+=" "+this.options.classes.clone,document.body.insertBefore(this.clonedElem,document.body.firstChild),"number"==typeof this.options.offset)this.scrollOffset=this.options.offset;else{if("string"!=typeof this.options.offset)throw new Error("Invalid offset: "+this.options.offset);this._setScrollOffset()}this._throttleUpdate=e(this.update.bind(this),this.options.throttle),this._throttleScrollOffset=e(this._setScrollOffset.bind(this),this.options.throttle),window.addEventListener("scroll",this._throttleUpdate,!1),window.addEventListener("resize",this._throttleScrollOffset,!1),this.options.onInit.call(this)},_setScrollOffset:function(){"string"==typeof this.options.offset&&(this.scrollOffset=o(document.querySelector(this.options.offset),this.options.offsetSide))},destroy:function(){document.body.removeChild(this.clonedElem),window.removeEventListener("scroll",this._throttleUpdate),window.removeEventListener("resize",this._throttleScrollOffset),this.options.onDestroy.call(this)},stick:function(){this.visible||(this.clonedElem.className=this.clonedElem.className.replace(new RegExp("(^|\\s)*"+this.options.classes.unstick+"(\\s|$)*","g"),""),this.clonedElem.className+=" "+this.options.classes.stick,this.visible=!0,this.options.onStick.call(this))},unstick:function(){this.visible&&(this.clonedElem.className=this.clonedElem.className.replace(new RegExp("(^|\\s)*"+this.options.classes.stick+"(\\s|$)*","g"),""),this.clonedElem.className+=" "+this.options.classes.unstick,this.visible=!1,this.options.onUnstick.call(this))},update:function(){s()>this.scrollOffset?this.stick():this.unstick()}},i});
+/*! rangeslider.js - v2.1.1 | (c) 2016 @andreruffert | MIT license | https://github.com/andreruffert/rangeslider.js */
+!function(a){"use strict";"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a(require("jquery")):a(jQuery)}(function(a){"use strict";function b(){var a=document.createElement("input");return a.setAttribute("type","range"),"text"!==a.type}function c(a,b){var c=Array.prototype.slice.call(arguments,2);return setTimeout(function(){return a.apply(null,c)},b)}function d(a,b){return b=b||100,function(){if(!a.debouncing){var c=Array.prototype.slice.apply(arguments);a.lastReturnVal=a.apply(window,c),a.debouncing=!0}return clearTimeout(a.debounceTimeout),a.debounceTimeout=setTimeout(function(){a.debouncing=!1},b),a.lastReturnVal}}function e(a){return a&&(0===a.offsetWidth||0===a.offsetHeight||a.open===!1)}function f(a){for(var b=[],c=a.parentNode;e(c);)b.push(c),c=c.parentNode;return b}function g(a,b){function c(a){"undefined"!=typeof a.open&&(a.open=a.open?!1:!0)}var d=f(a),e=d.length,g=[],h=a[b];if(e){for(var i=0;e>i;i++)g[i]=d[i].style.cssText,d[i].style.setProperty?d[i].style.setProperty("display","block","important"):d[i].style.cssText+=";display: block !important",d[i].style.height="0",d[i].style.overflow="hidden",d[i].style.visibility="hidden",c(d[i]);h=a[b];for(var j=0;e>j;j++)d[j].style.cssText=g[j],c(d[j])}return h}function h(a,b){var c=parseFloat(a);return Number.isNaN(c)?b:c}function i(a){return a.charAt(0).toUpperCase()+a.substr(1)}function j(b,e){if(this.$window=a(window),this.$document=a(document),this.$element=a(b),this.options=a.extend({},n,e),this.polyfill=this.options.polyfill,this.orientation=this.$element[0].getAttribute("data-orientation")||this.options.orientation,this.onInit=this.options.onInit,this.onSlide=this.options.onSlide,this.onSlideEnd=this.options.onSlideEnd,this.DIMENSION=o.orientation[this.orientation].dimension,this.DIRECTION=o.orientation[this.orientation].direction,this.DIRECTION_STYLE=o.orientation[this.orientation].directionStyle,this.COORDINATE=o.orientation[this.orientation].coordinate,this.polyfill&&m)return!1;this.identifier="js-"+k+"-"+l++,this.startEvent=this.options.startEvent.join("."+this.identifier+" ")+"."+this.identifier,this.moveEvent=this.options.moveEvent.join("."+this.identifier+" ")+"."+this.identifier,this.endEvent=this.options.endEvent.join("."+this.identifier+" ")+"."+this.identifier,this.toFixed=(this.step+"").replace(".","").length-1,this.$fill=a('<div class="'+this.options.fillClass+'" />'),this.$handle=a('<div class="'+this.options.handleClass+'" />'),this.$range=a('<div class="'+this.options.rangeClass+" "+this.options[this.orientation+"Class"]+'" id="'+this.identifier+'" />').insertAfter(this.$element).prepend(this.$fill,this.$handle),this.$element.css({position:"absolute",width:"1px",height:"1px",overflow:"hidden",opacity:"0"}),this.handleDown=a.proxy(this.handleDown,this),this.handleMove=a.proxy(this.handleMove,this),this.handleEnd=a.proxy(this.handleEnd,this),this.init();var f=this;this.$window.on("resize."+this.identifier,d(function(){c(function(){f.update(!1,!1)},300)},20)),this.$document.on(this.startEvent,"#"+this.identifier+":not(."+this.options.disabledClass+")",this.handleDown),this.$element.on("change."+this.identifier,function(a,b){if(!b||b.origin!==f.identifier){var c=a.target.value,d=f.getPositionFromValue(c);f.setPosition(d)}})}Number.isNaN=Number.isNaN||function(a){return"number"==typeof a&&a!==a};var k="rangeslider",l=0,m=b(),n={polyfill:!0,orientation:"horizontal",rangeClass:"rangeslider",disabledClass:"rangeslider--disabled",horizontalClass:"rangeslider--horizontal",verticalClass:"rangeslider--vertical",fillClass:"rangeslider__fill",handleClass:"rangeslider__handle",startEvent:["mousedown","touchstart","pointerdown"],moveEvent:["mousemove","touchmove","pointermove"],endEvent:["mouseup","touchend","pointerup"]},o={orientation:{horizontal:{dimension:"width",direction:"left",directionStyle:"left",coordinate:"x"},vertical:{dimension:"height",direction:"top",directionStyle:"bottom",coordinate:"y"}}};return j.prototype.init=function(){this.update(!0,!1),this.onInit&&"function"==typeof this.onInit&&this.onInit()},j.prototype.update=function(a,b){a=a||!1,a&&(this.min=h(this.$element[0].getAttribute("min"),0),this.max=h(this.$element[0].getAttribute("max"),100),this.value=h(this.$element[0].value,Math.round(this.min+(this.max-this.min)/2)),this.step=h(this.$element[0].getAttribute("step"),1)),this.handleDimension=g(this.$handle[0],"offset"+i(this.DIMENSION)),this.rangeDimension=g(this.$range[0],"offset"+i(this.DIMENSION)),this.maxHandlePos=this.rangeDimension-this.handleDimension,this.grabPos=this.handleDimension/2,this.position=this.getPositionFromValue(this.value),this.$element[0].disabled?this.$range.addClass(this.options.disabledClass):this.$range.removeClass(this.options.disabledClass),this.setPosition(this.position,b)},j.prototype.handleDown=function(a){if(this.$document.on(this.moveEvent,this.handleMove),this.$document.on(this.endEvent,this.handleEnd),!((" "+a.target.className+" ").replace(/[\n\t]/g," ").indexOf(this.options.handleClass)>-1)){var b=this.getRelativePosition(a),c=this.$range[0].getBoundingClientRect()[this.DIRECTION],d=this.getPositionFromNode(this.$handle[0])-c,e="vertical"===this.orientation?this.maxHandlePos-(b-this.grabPos):b-this.grabPos;this.setPosition(e),b>=d&&b<d+this.handleDimension&&(this.grabPos=b-d)}},j.prototype.handleMove=function(a){a.preventDefault();var b=this.getRelativePosition(a),c="vertical"===this.orientation?this.maxHandlePos-(b-this.grabPos):b-this.grabPos;this.setPosition(c)},j.prototype.handleEnd=function(a){a.preventDefault(),this.$document.off(this.moveEvent,this.handleMove),this.$document.off(this.endEvent,this.handleEnd),this.$element.trigger("change",{origin:this.identifier}),this.onSlideEnd&&"function"==typeof this.onSlideEnd&&this.onSlideEnd(this.position,this.value)},j.prototype.cap=function(a,b,c){return b>a?b:a>c?c:a},j.prototype.setPosition=function(a,b){var c,d;void 0===b&&(b=!0),c=this.getValueFromPosition(this.cap(a,0,this.maxHandlePos)),d=this.getPositionFromValue(c),this.$fill[0].style[this.DIMENSION]=d+this.grabPos+"px",this.$handle[0].style[this.DIRECTION_STYLE]=d+"px",this.setValue(c),this.position=d,this.value=c,b&&this.onSlide&&"function"==typeof this.onSlide&&this.onSlide(d,c)},j.prototype.getPositionFromNode=function(a){for(var b=0;null!==a;)b+=a.offsetLeft,a=a.offsetParent;return b},j.prototype.getRelativePosition=function(a){var b=i(this.COORDINATE),c=this.$range[0].getBoundingClientRect()[this.DIRECTION],d=0;return"undefined"!=typeof a["page"+b]?d=a["client"+b]:"undefined"!=typeof a.originalEvent["client"+b]?d=a.originalEvent["client"+b]:a.originalEvent.touches&&a.originalEvent.touches[0]&&"undefined"!=typeof a.originalEvent.touches[0]["client"+b]?d=a.originalEvent.touches[0]["client"+b]:a.currentPoint&&"undefined"!=typeof a.currentPoint[this.COORDINATE]&&(d=a.currentPoint[this.COORDINATE]),d-c},j.prototype.getPositionFromValue=function(a){var b,c;return b=(a-this.min)/(this.max-this.min),c=Number.isNaN(b)?0:b*this.maxHandlePos},j.prototype.getValueFromPosition=function(a){var b,c;return b=a/(this.maxHandlePos||1),c=this.step*Math.round(b*(this.max-this.min)/this.step)+this.min,Number(c.toFixed(this.toFixed))},j.prototype.setValue=function(a){(a!==this.value||""===this.$element[0].value)&&this.$element.val(a).trigger("input",{origin:this.identifier})},j.prototype.destroy=function(){this.$document.off("."+this.identifier),this.$window.off("."+this.identifier),this.$element.off("."+this.identifier).removeAttr("style").removeData("plugin_"+k),this.$range&&this.$range.length&&this.$range[0].parentNode.removeChild(this.$range[0])},a.fn[k]=function(b){var c=Array.prototype.slice.call(arguments,1);return this.each(function(){var d=a(this),e=d.data("plugin_"+k);e||d.data("plugin_"+k,e=new j(this,b)),"string"==typeof b&&e[b].apply(e,c)})},"rangeslider.js is available in jQuery context e.g $(selector).rangeslider(options);"});
+/**
+ * jQuery iframe click tracking plugin
+ *
+ * @author Vincent Paré (www.finalclap.com)
+ * @copyright © 2013-2015 Vincent Paré
+ * @license http://opensource.org/licenses/Apache-2.0
+ * @version 1.1.0
+ */
+(function($){
+	// Tracking handler manager
+	$.fn.iframeTracker = function(handler){
+		var target = this.get();
+		if (handler === null || handler === false) {
+			$.iframeTracker.untrack(target);
+		} else if (typeof handler == "object") {
+			$.iframeTracker.track(target, handler);
+		} else {
+			throw new Error("Wrong handler type (must be an object, or null|false to untrack)");
+		}
+	};
+	
+	// Iframe tracker common object
+	$.iframeTracker = {
+		// State
+		focusRetriever: null,  // Element used for restoring focus on window (element)
+		focusRetrieved: false, // Says if the focus was retrived on the current page (bool)
+		handlersList: [],      // Store a list of every trakers (created by calling $(selector).iframeTracker...)
+		isIE8AndOlder: false,  // true for Internet Explorer 8 and older
+		
+		// Init (called once on document ready)
+		init: function(){
+			// Determine browser version (IE8-) ($.browser.msie is deprecated since jQuery 1.9)
+			try {
+				if ($.browser.msie == true && $.browser.version < 9) {
+					this.isIE8AndOlder = true;
+				}
+			} catch(ex) {
+				try {
+					var matches = navigator.userAgent.match(/(msie) ([\w.]+)/i);
+					if (matches[2] < 9) {
+						this.isIE8AndOlder = true;
+					}
+				} catch(ex2) {}
+			}
+			
+			// Listening window blur
+			$(window).focus();
+			$(window).blur(function(e){
+				$.iframeTracker.windowLoseFocus(e);
+			});
+			
+			// Focus retriever (get the focus back to the page, on mouse move)
+			$('body').append('<div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;" type="text" value="" id="focus_retriever" readonly="true" /></div>');
+			this.focusRetriever = $('#focus_retriever');
+			this.focusRetrieved = false;
+			$(document).mousemove(function(e){
+				if (document.activeElement && document.activeElement.tagName == 'IFRAME') {
+					$.iframeTracker.focusRetriever.focus();
+					$.iframeTracker.focusRetrieved = true;
+				}
+			});
+			
+			// Special processing to make it work with my old friend IE8 (and older) ;)
+			if (this.isIE8AndOlder) {
+				// Blur doesn't works correctly on IE8-, so we need to trigger it manually
+				this.focusRetriever.blur(function(e){
+					e.stopPropagation();
+					e.preventDefault();
+					$.iframeTracker.windowLoseFocus(e);
+				});
+				
+				// Keep focus on window (fix bug IE8-, focusable elements)
+				$('body').click(function(e){ $(window).focus(); });
+				$('form').click(function(e){ e.stopPropagation(); });
+				
+				// Same thing for "post-DOMready" created forms (issue #6)
+				try {
+					$('body').on('click', 'form', function(e){ e.stopPropagation(); });
+				} catch(ex) {
+					console.log("[iframeTracker] Please update jQuery to 1.7 or newer. (exception: " + ex.message + ")");
+				}
+			}
+		},
+		
+		
+		// Add tracker to target using handler (bind boundary listener + register handler)
+		// target: Array of target elements (native DOM elements)
+		// handler: User handler object
+		track: function(target, handler){
+			// Adding target elements references into handler
+			handler.target = target;
+			
+			// Storing the new handler into handler list
+			$.iframeTracker.handlersList.push(handler);
+			
+			// Binding boundary listener
+			$(target)
+				.bind('mouseover', {handler: handler}, $.iframeTracker.mouseoverListener)
+				.bind('mouseout',  {handler: handler}, $.iframeTracker.mouseoutListener);
+		},
+		
+		// Remove tracking on target elements
+		// target: Array of target elements (native DOM elements)
+		untrack: function(target){
+			if (typeof Array.prototype.filter != "function") {
+				console.log("Your browser doesn't support Array filter, untrack disabled");
+				return;
+			}
+			
+			// Unbinding boundary listener
+			$(target).each(function(index){
+				$(this)
+					.unbind('mouseover', $.iframeTracker.mouseoverListener)
+					.unbind('mouseout', $.iframeTracker.mouseoutListener);
+			});
+			
+			// Handler garbage collector
+			var nullFilter = function(value){
+				return value === null ? false : true;
+			};
+			for (var i in this.handlersList) {
+				// Prune target
+				for (var j in this.handlersList[i].target) {
+					if ($.inArray(this.handlersList[i].target[j], target) !== -1) {
+						this.handlersList[i].target[j] = null;
+					}
+				}
+				this.handlersList[i].target = this.handlersList[i].target.filter(nullFilter);
+				
+				// Delete handler if unused
+				if (this.handlersList[i].target.length == 0) {
+					this.handlersList[i] = null;
+				}
+			}
+			this.handlersList = this.handlersList.filter(nullFilter);
+		},
+		
+		// Target mouseover event listener
+		mouseoverListener: function(e){
+			e.data.handler.over = true;
+			try {e.data.handler.overCallback(this);} catch(ex) {}
+		},
+		
+		// Target mouseout event listener
+		mouseoutListener: function(e){
+			e.data.handler.over = false;
+			$.iframeTracker.focusRetriever.focus();
+			try {e.data.handler.outCallback(this);} catch(ex) {}
+		},
+		
+		// Calls blurCallback for every handler with over=true on window blur
+		windowLoseFocus: function(event){
+			for (var i in this.handlersList) {
+				if (this.handlersList[i].over == true) {
+					try {this.handlersList[i].blurCallback();} catch(ex) {}
+				}
+			}
+		}
+	};
+	
+	// Init the iframeTracker on document ready
+	$(document).ready(function(){
+		$.iframeTracker.init();
+	});
+})(jQuery);

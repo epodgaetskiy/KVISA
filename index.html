@@ -74,7 +74,7 @@
 				<h1>Для ваших мозгов</h1>
 				<div class="header-circle">
 					<img src="img/main-kvis.png" alt="" class="main-circle">
-					<button class="btn-registration">Зарегистрироваться</button>
+					<a href="#near-game" class="btn-registration">Зарегистрироваться</a>
 					<div class="about-game-block">
 						<span>на ближайшую игру</span> <span class="date-game">23 марта 2016</span>
 					</div>
@@ -188,7 +188,7 @@
 								<img src="img/icon-location.png" alt="" class="icon-item">
 							</div>
 						</div>
-						<button class="btn-registration">Зарегистрироваться</button>
+						<button class="btn-registration-go">Зарегистрироваться</button>
 					</div>
 				</div>
 				<div class="game-info-block">
@@ -231,7 +231,7 @@
 								<img src="img/icon-location.png" alt="" class="icon-item">
 							</div>
 						</div>
-						<button class="btn-registration">Зарегистрироваться</button>
+						<a href="#near-game" class="btn-registration">Зарегистрироваться</a>
 					</div>
 				</div>
 				<div class="game-info-block">
@@ -274,13 +274,13 @@
 								<img src="img/icon-location.png" alt="" class="icon-item">
 							</div>
 						</div>
-						<button class="btn-registration">Зарегистрироваться</button>
+						<a href="#near-game" class="btn-registration">Зарегистрироваться</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="where" class="map-block">
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=TjE2zSoesoJhGmclTcTxAnZ7thuUtOMQ&width=100%&height=300&lang=ru_UA&sourceType=constructor&scroll=true"></script>
+			<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=TjE2zSoesoJhGmclTcTxAnZ7thuUtOMQ&width=100%&height=300&lang=ru_UA&sourceType=constructor&scroll=true"></script> -->
 		</div>	
 	</section>
 	<section id="what-is" class="what-is">
@@ -469,7 +469,7 @@
 		<i class="decoration-top"></i>
 		<i class="decoration-bottom"></i>
 		<h1>Не упусти свой шанс</h1>
-		<button class="btn-registration">Зарегистрироваться</button>
+		<a href="#near-game" class="btn-registration">Зарегистрироваться</a>
 	</section>
 	<section class="gallery">
 		<div class="container clearfix">
@@ -566,14 +566,14 @@
 						<p class="price">4 500 рублей</p>
 					</li>
 				</ul>
-				<button class="btn-registration">Заказать сертификат</button>
+				<a href="#near-game" class="btn-registration">Заказать сертификат</a>
 			</div>
 			<div class="certificate_right">
 				<img src="img/sertif-img.png" alt="" class="certificate-img">
 			</div>
 		</div>
 	</section>
-	<section class="enter-team-block">
+<!-- 	<section class="enter-team-block">
 		<a href="" class="btn-enter-team">Вход для команд</a>
 	</section>
 	<section id="statistics" class="statistics">
@@ -601,7 +601,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<div class="modal-enter-team">
 		<div class="modal-enter-team-container">
@@ -682,5 +682,19 @@
 	<!-- Load Scripts End -->
 	<script src="js/libs.js"></script>
 	<script src="js/common.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
+		ymaps.ready(init);
+	    var myMap;
+
+	    function init(){     
+	        myMap = new ymaps.Map("where", {
+	            center: [55.76, 37.64],
+	            zoom: 7
+	        });
+	    }
+
+	    myMap.behaviors.disable('drag');
+	</script>
 </body>
 </html>

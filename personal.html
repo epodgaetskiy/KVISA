@@ -21,20 +21,24 @@
 	
 
 	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
-	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+	<!-- <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script> -->
 
 	<!-- Load CSS Start -->
-	<script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
+	<!-- <script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
 	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
-	<script>loadCSS( "libs/slick/slick.css", false, "all" );</script>
+	<script>loadCSS( "libs/slick/slick.css", false, "all" );</script> -->
 	<!-- Load CSS End -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<!-- Load CSS Compiled without JS -->
-	<noscript>
+<!-- 	<noscript>
 		<link rel="stylesheet" href="css/fonts.min.css">
 		<link rel="stylesheet" href="css/main.min.css">
 		<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
-	</noscript>
+	</noscript> -->
+	<link rel="stylesheet" href="css/fonts.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+	
 
 </head>
 
@@ -68,9 +72,9 @@
 		<div class="container-content">
 			<div class="personal-header">
 				<h1>Команда Google</h1>
-				<div class="team-info-block">
+				<div class="team-info-block clearfix">
 					<div class="team-info_column">
-						<div class="team-info__text">
+						<div class="team-info__container">
 							<div class="team-circle">
 								<p class="info-count">42</p>
 							</div>
@@ -78,26 +82,255 @@
 						</div>
 					</div>
 					<div class="team-info_column">
-						<div class="team-info__text">
-							<div class="team-circle">
-								<p class="info-count">33 <span>тыс.</span></p>
+						<div class="team-info__container">
+							<div class="team-circle second-circle">
+								<p class="info-count">33<span>тыс.</span></p>
 							</div>
 							<p class="info-text">Набранно балов</p>
 						</div>
 					</div>
 					<div class="team-info_column">
-						<div class="team-info__text">
-							<div class="team-circle">
-								<p class="info-count">8 <img class=""team-rang" src="" alt=""></p>
+						<div class="team-info__container">
+							<div class="team-circle third-circle">
+								<p class="info-count">8 <img class="team-rang" src="img/rank.png" alt=""></p>
 							</div>
 							<p class="info-text">Ранг</p>
 						</div>
 					</div>
 				</div>
+				<div class="progress-block">
+					<div class="progress_rank clearfix">
+						<p class="rank-team-left">Ранг 6</p>
+						<p class="rank-team-right">Ранг 7</p>
+					</div>
+					<div class="progress-bar">
+						<input type="range" value="60" min="0" max="100" step="1" data-rangeslider>
+					</div>
+				</div>
+				<table class="table-games">
+					<tr class="name-column">
+						<td>Игра</td>
+						<td class="hidden-xs">Дата</td>
+						<td>Место</td>
+						<td><span class="hidden-xs">Кол-во</span> очков</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="game-number">Номер #23<br/><span class="visible-xs">22 марта 2016</span></td>
+						<td class="game-date hidden-xs">22 марта 2016</td>
+						<td class="team-place-info"><span class="team-place">2</span> из <span class="team-max-placed">32</span></td>
+						<td class="team-points">5 000</td>
+						<td class="game-general"><span class="hidden-xs">Вся турнирная таблица</span><img src="img/icon-all-games.png" alt="" class="game-general-img visible-xs"></td>
+					</tr>
+					<tr>
+						<td class="game-number">Номер #23<br/><span class="visible-xs">22 марта 2016</span></td>
+						<td class="game-date hidden-xs">22 марта 2016</td>
+						<td class="team-place-info"><span class="team-place">2</span> из <span class="team-max-placed">32</span></td>
+						<td class="team-points">5 000</td>
+						<td class="game-general"><span class="hidden-xs">Вся турнирная таблица</span><img src="img/icon-all-games.png" alt="" class="game-general-img visible-xs"></td>
+					</tr>
+					<tr>
+						<td class="game-number">Номер #23<br/><span class="visible-xs">22 марта 2016</span></td>
+						<td class="game-date hidden-xs">22 марта 2016</td>
+						<td class="team-place-info"><span class="team-place first-place">1</span> из <span class="team-max-placed">32</span></td>
+						<td class="team-points">5 000</td>
+						<td class="game-general"><span class="hidden-xs">Вся турнирная таблица</span><img src="img/icon-all-games.png" alt="" class="game-general-img visible-xs"></td>
+					</tr>
+					<tr>
+						<td class="game-number">Номер #23<br/><span class="visible-xs">22 марта 2016</span></td>
+						<td class="game-date hidden-xs">22 марта 2016</td>
+						<td class="team-place-info"><span class="team-place">2</span> из <span class="team-max-placed">32</span></td>
+						<td class="team-points">5 000</td>
+						<td class="game-general"><span class="hidden-xs">Вся турнирная таблица</span><img src="img/icon-all-games.png" alt="" class="game-general-img visible-xs"></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</header>
-
+	<section id="near-game" class="near-game">
+		<div class="calenadar-block">
+			<div class="container-content clearfix">
+				<div class="near-game-choice-block">
+					<div class="near-game-choice_container">	
+						<p class="first-text">Ближайшие</p>
+						<p class="second-text">Игры</p>
+						<div class="game-block clearfix">
+							<div class="game-block_left clearfix">
+								<p class="number-game">#4</p>
+								<p class="info">Квиз, плиз</p>
+							</div>
+							<div class="game-block_right clearfix">
+								<div class="date-block">
+									<p class="date">20 марта 2016</p>
+									<p class="time"><i class="icon-time"></i> 22:00</p>
+								</div>
+								<div class="date-block">
+									<p class="date">22 марта 2016</p>
+									<p class="time"><i class="icon-time"></i> 20:00</p>
+								</div>
+							</div>
+						</div>
+						<div class="game-block clearfix">
+							<div class="game-block_left clearfix">
+								<p class="number-game">#5</p>
+								<p class="info">Квиз, плиз</p>
+							</div>
+							<div class="game-block_right clearfix">
+								<div class="date-block">
+									<p class="date">23 марта 2016</p>
+									<p class="time"><i class="icon-time"></i> 20:00</p>
+								</div>
+							</div>
+						</div>
+						<div class="game-block clearfix">
+							<div class="game-block_left clearfix">
+								<p class="number-game">#6</p>
+								<p class="info">Квиз, плиз</p>
+							</div>
+							<div class="game-block_right clearfix">
+								<div class="date-block">
+									<p class="date">27 марта 2016</p>
+									<p class="time"><img src="img/icon-time.png" alt="" class="icon-time"> 20:00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="game-info-block">
+					<div class="game-info_container">
+						<p class="game-number">Игра #1</p>
+						<p class="game-present">Юбилейная игра! Разыгрываем супер мега джекпот и 100500 разных призов</p>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">когда</span>
+								<p><span>c</span> 23 <span>по</span> 26 МАРТА</p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-calendar.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">стоимость участия</span>
+								<p>5 000 рублей</p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-rub.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">зарегестрировано</span>
+								<p>450 человек</p>
+							</div>
+							<div class="item-img">
+								<img width="28px" height="71px" src="img/icon-man.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">где</span>
+								<p><span>Москва ул. Петровская 4а</span></p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-location.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<button class="btn-registration">Зарегистрироваться</button>
+					</div>
+				</div>
+				<div class="game-info-block">
+					<div class="game-info_container">
+						<p class="game-number">Игра #2</p>
+						<p class="game-present">Юбилейная игра! Разыгрываем супер мега джекпот и 100500 разных призов</p>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">когда</span>
+								<p><span>c</span> 23 <span>по</span> 26 МАРТА</p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-calendar.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">стоимость участия</span>
+								<p>5 000 рублей</p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-rub.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">зарегестрировано</span>
+								<p>450 человек</p>
+							</div>
+							<div class="item-img">
+								<img width="28px" height="71px" src="img/icon-man.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">где</span>
+								<p><span>Москва ул. Петровская 4а</span></p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-location.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<button class="btn-registration">Зарегистрироваться</button>
+					</div>
+				</div>
+				<div class="game-info-block">
+					<div class="game-info_container">
+						<p class="game-number">Игра #3</p>
+						<p class="game-present">Юбилейная игра! Разыгрываем супер мега джекпот и 100500 разных призов</p>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">когда</span>
+								<p><span>c</span> 23 <span>по</span> 26 МАРТА</p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-calendar.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">стоимость участия</span>
+								<p>5 000 рублей</p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-rub.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">зарегестрировано</span>
+								<p>450 человек</p>
+							</div>
+							<div class="item-img">
+								<img width="28px" height="71px" src="img/icon-man.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<div class="game-info__item clearfix">
+							<div class="item-text-block">
+								<span class="top-text">где</span>
+								<p><span>Москва ул. Петровская 4а</span></p>
+							</div>
+							<div class="item-img">
+								<img src="img/icon-location.png" alt="" class="icon-item">
+							</div>
+						</div>
+						<button class="btn-registration">Зарегистрироваться</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="where" class="map-block">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=TjE2zSoesoJhGmclTcTxAnZ7thuUtOMQ&width=100%&height=300&lang=ru_UA&sourceType=constructor&scroll=true"></script>
+		</div>	
+	</section>
 
 
 	<!--[if lt IE 9]>
@@ -108,12 +341,14 @@
 	<![endif]-->
 
 	<!-- Load Scripts Start -->
-	<script>var scr = {"scripts":[
+<!-- 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.js", "async" : false},
 		{"src" : "js/common.js", "async" : false}
 		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
-	</script>
+	</script> -->
 	<!-- Load Scripts End -->
+	<script src="js/libs.js"></script>
+	<script src="js/common.js"></script>
 
 </body>
 </html>
