@@ -692,9 +692,11 @@
 	            center: [55.76, 37.64],
 	            zoom: 7
 	        });
+
+	        myMap.behaviors.disable('scrollZoom');
+			myMap.behaviors.disable('drag');
 	    }
 
-	    myMap.behaviors.disable('drag');
 	</script>
 </body>
 </html>
