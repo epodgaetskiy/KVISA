@@ -689,11 +689,16 @@
 
 	    function init(){     
 	        myMap = new ymaps.Map("where", {
-	            center: [55.76, 37.64],
-	            zoom: 7
+	            center: [55.762166, 37.613063],
+	            zoom: 14
 	        });
 
-	        myMap.behaviors.disable('scrollZoom');
+	        myPlacemark = new ymaps.Placemark([55.762166, 37.613063], { 
+	            hintContent: 'Москва, ул. Большая Дмитровка, 13', 
+	            balloonContent: 'Москва, ул. Большая Дмитровка, 13' 
+	        });
+
+	        myMap.geoObjects.add(myPlacemark);
 			myMap.behaviors.disable('drag');
 	    }
 
