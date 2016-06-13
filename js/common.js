@@ -190,11 +190,7 @@ $(function() {
 	//personal.html
 	//progress bar 
 	$('input[type="range"]').rangeslider({
-	    polyfill: false,
-	    onSlide: function(position, value) {
-	    	console.log(position);
-	    	console.log(value);
-	    }
+	    polyfill: false
 	  });
 
 	//iframe video play
