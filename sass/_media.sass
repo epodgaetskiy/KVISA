@@ -1,0 +1,1038 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+@media only screen and (max-width : 1300px)
+	.certificate .certificate_right .certificate-img
+		width: 90%
+		left: 0
+		padding-left: 10%
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.container 
+		width: 100%
+
+	.example-questions .quest .quest-column-3 .quest-number 
+		font-size: 46px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.container-content
+		width: 750px
+	
+	.navigation 
+			.menu 
+				width: 78%
+				li 
+					a 
+						font-size: 16px
+
+	.header 
+		.header-main 
+			h2
+				margin-top: 50px
+				font-size: 50px
+			h1 
+				margin-top: 20px
+				font-size: 70px
+			.header-circle
+				.main-circle 
+					width: 500px
+					height: 500px
+					background-size: 100% 100%
+				.left-circle
+					bottom: 142px
+					width: 160px
+					height: 160px
+					background-size: 100% 100%
+					.circle-wrapper
+						.text-container
+							span:first-child
+								padding-left: 5px
+								font-size: 14px
+								margin-top: 20px
+								margin-bottom: 5px
+							span:nth-child(2) 
+								font-size: 54px
+								margin-bottom: 5px
+							span:last-child 
+								padding-left: 10px
+								font-size: 18px
+				.right-circle
+					bottom: 142px
+					width: 160px
+					height: 160px
+					background-size: 100% 100%
+					.circle-wrapper
+						.text-container
+							span 
+								font-size: 32px
+							span:first-child
+								margin-bottom: 10px
+				.btn-registration
+					margin-top: 60px
+
+	.near-game
+		.calenadar-block
+			height: 580px
+			.near-game-choice-block
+				float: left
+				width: 32%
+				padding-top: 6%
+				margin-right: 3%
+				.near-game-choice_container
+					.first-text
+						margin-bottom: 10px
+						font-size: 36px
+					.second-text
+						font-size: 88px 
+						margin-bottom: 25px
+					.game-block 	
+						padding: 20px 10px 20px 10px
+						.game-block_left
+							.number-game
+								font-size: 36px
+							.info	
+								font-size: 16px
+						.game-block_right
+							.date-block
+								margin-bottom: 5px
+								.date 
+									font-size: 16px
+									margin-bottom: 5px
+								.time
+									font-size: 16px
+								.icon-time  
+									width: 14px
+									height: 14px
+									background: url("../img/icon-time.png") no-repeat
+			.game-info-block
+				height: 456px
+				margin-top: 20px
+				background-size: 100% 100%
+				.game-info_container
+					left: 18%
+					.game-number
+						margin-bottom: 10px
+					.game-present
+						margin-bottom: 20px
+					.game-info__item
+						width: 100%
+						margin-bottom: 10px
+						&:last-of-type
+							margin-bottom: 35px
+						.item-text-block
+							width: 250px
+							.top-text
+								font-size: 16px
+								margin-bottom: 5px
+							p 
+								font-size: 22px
+								span 
+									vertical-align: middle
+									font-size: 18px
+									font-weight: 400
+									line-height: 1em
+									opacity: 0.7
+									color: white
+						.item-img
+							width: 43px
+							height: 43px
+							margin-left: 10px
+							margin-right: 38px
+							.icon-item 
+								width: 43px
+								height: 43px
+								background-size: 100% 100%
+					.btn-registration-go
+						width: 300px
+						margin-right: 40px
+
+	.what-is h2
+		font-size: 48px
+
+	.digits
+		height: 1050px
+		.digits-container	
+			margin-bottom: 250px
+			.digit-circles
+				margin-top: 100px
+				width: 100%
+				height: auto
+			.digit-1
+				top: 170px
+				left: 64px
+				.digit 
+					font-size: 62px
+					margin-bottom: 40px
+				.digit-text
+					font-size: 22px
+					margin-left: -25px
+			.digit-2
+				top: 170px
+				left: 198px
+				.digit 
+					font-size: 62px
+					margin-bottom: 40px
+				.digit-text
+					font-size: 22px
+					margin-left: -10px
+			.digit-3
+				top: 170px
+				left: 347px
+				.digit 
+					font-size: 62px
+					margin-bottom: 40px
+				.digit-text
+					font-size: 22px
+					margin-left: -7px
+			.digit-4
+				top: 170px
+				right: 180px
+				.digit 
+					font-size: 56px
+					padding-left: 0
+					margin-bottom: 45px
+				.digit-text
+					font-size: 22px
+					margin-left: 0
+			.digit-5
+				top: 170px
+				right: 17px
+				.digit 
+					font-size: 48px
+					margin-bottom: 50px
+					padding-left: 12px 
+				.digit-text
+					font-size: 18px
+
+	.example-questions
+		.quest
+			.quest-column-3
+				$padding: 35px
+				padding: 50px $padding 40px $padding
+				.quest-number
+					font-size: 34px
+					margin-bottom: 25px
+				.quest-text
+					margin-bottom: 25px
+					font-size: 16px
+					line-height: 18px
+				.discover-answer
+					margin: 0 auto
+					display: block
+					width: 172px
+					height: 49px
+					border: 2px solid white
+					background-color: transparent
+					border-radius: 8px
+					color: white
+					font-size: 22px
+					font-weight: 300
+					text-align: center
+					&:hover
+						background-color: white 
+						color: black
+				.answer
+					display: none
+					min-height: 49px
+					margin: 0
+					padding: 0
+					color: white
+					font-size: 19px
+					font-weight: 300
+					line-height: 1em
+			.quest-1
+				background: url("../img/quest-bg-1.jpg") no-repeat
+				background-size: 100% 100%
+			.quest-2 
+				background-color: #fcd63c
+			.quest-3
+				background-color: #20b3d5
+	
+	.not-miss
+		padding: 80px 0 50px
+		h1
+			font-size: 54px
+			margin-bottom: 40px
+		.decoration-top
+			top: -19px
+			width: 254px
+			height: 20px
+
+	.meeting .meeting-text-container h1 
+		font-size: 36px
+
+	.meeting .meeting-text-container h1:before 
+		left: -47px
+	
+	.meeting .meeting-text-container p
+		font-size: 18px
+		line-height: 26px
+	
+	.contacts 
+		padding: 80px 0  55px 0
+		h1
+			font-size: 54px
+		.contacts-block
+			width: 100%
+
+	.partners 
+		padding: 70px 0 80px 0
+		h1
+			font-size: 54px
+			margin-bottom: 45px
+
+	.certificate
+		.certificate_left
+			padding-top: 90px
+			h1 
+				font-size: 52px
+				margin-bottom: 10px
+			h2
+				font-size: 52px
+				margin-bottom: 25px
+			p 
+				font-size: 18px
+				line-height: 24px
+				margin-bottom: 25px
+			.price-block 
+				margin-bottom: 25px
+				.price_item
+					.number-text
+						font-size: 16px
+						margin-bottom: 10px
+					.price 
+						font-size: 22px
+			.btn-registration
+				width: 100%
+				height: 64px
+				margin-bottom: 70px
+		.certificate_right 
+			height: 600px
+
+	.statistics
+		padding: 80px 0
+		.statistics_left
+			h1 
+				margin-bottom: 5px
+				color: white
+				font-size: 42px
+			h2 
+				font-size: 150px
+		.statistics_right
+			.game-date-block
+				.game-date
+					padding: 20px 0 
+					p 
+						font-size: 16px
+				.game-result
+					padding: 20px 0 
+					p 
+						font-size: 16px
+
+	.personal-header .progress-block .progress-bar-block .progress-now
+		left: 47%
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+	.container-content
+		margin: 0 auto
+		padding: 0 15px
+		width: calc(100% - 30px)
+	
+	.navigation 
+		.menu 
+			display: none
+		.btn-menu-mobile
+			display: block
+			
+	.header 
+		.header-main 
+			h2, h1
+				display: none
+			.header-circle
+				.main-circle 
+					margin-top: 40px
+					width: 200px
+					height: 200px
+					background-size: 100% 100%
+				.left-circle
+					bottom: 225px
+					width: 100px
+					height: 100px
+					background-size: 100% 100%
+					.circle-wrapper
+						.text-container
+							span:first-child
+								display: none
+							span:nth-child(2) 
+								font-size: 36px
+							span:last-child 
+								padding-left: 0
+								font-size: 16px
+				.right-circle
+					bottom: 225px
+					width: 100px
+					height: 100px
+					background-size: 100% 100%
+					.circle-wrapper
+						.text-container
+							span:first-child
+								margin-top: 3px
+								margin-bottom: 0
+								font-size: 36px
+							span:last-child
+								font-size: 18px
+				.btn-registration
+					margin-top: 170px
+					margin-bottom: 30px
+					width: 100%
+					font-size: 26px
+				.about-game-block
+					span 
+						font-size: 18px
+
+	.near-game
+		.calenadar-block
+			width: 100%
+			height: 1250px
+			background: url("../img/bg-game-xs.jpg") no-repeat
+			background-size: 100% 100%
+			.near-game-choice-block
+				width: 100%
+				padding-top: 45px
+				.near-game-choice_container
+					.first-text
+						margin-bottom: 10px
+						font-size: 30px
+						text-align: center
+					.second-text
+						font-size: 72px
+						margin-bottom: 25px
+						text-align: center
+					.game-block 	
+						padding: 15px 10px 15px 10px
+						opacity: 1
+						.game-block_left
+							.number-game
+								font-size: 56px
+							.info	
+								font-size: 18px
+						.game-block_right
+							.date-block
+								.date 
+									font-size: 22px
+								.time
+									font-size: 18px
+			.game-info-block
+				float: left
+				width: 100%
+				background: none
+				.game-info_container
+					position: absolute
+					left: 0
+					width: 100%
+					.game-number
+						margin-top: 90px
+						margin-bottom: 20px
+						font-size: 42px
+					.game-present
+						font-size: 17px
+						line-height: 20px
+						margin-bottom: 30px
+					.game-info__item
+						width: 100%
+						margin-bottom: 25px
+						&:last-of-type
+							margin-bottom: 50px
+						.item-text-block
+							width: 74%
+							.top-text
+								font-size: 18px
+								margin-bottom: 10px
+							p 
+								font-size: 26px
+								span 
+									font-size: 18px
+						.item-img
+							width: 50px
+							margin-left: 0
+							margin-right: 0
+							.icon-item 
+								width: auto
+								height: auto
+								background-size: auto
+					.btn-registration-go
+						float: left 
+						width: 100%
+						&:before
+							top: -40px
+
+	.what-is
+		width: 100%
+		padding: 50px 0 70px 0
+		background: url("../img/bg-what-xs.jpg") no-repeat
+		background-size: 100% 100%
+		h1 
+			font-size: 35px
+			line-height: 1em
+			margin-bottom: 40px
+		p 
+			font-size: 18px
+			line-height: 24px
+			&:last-of-type
+				margin-bottom: 50px
+		h2 
+			font-size: 28px
+			line-height: 32px
+			font-weight: 400
+			margin: 0
+			margin-bottom: 40px
+		.column-container
+			display: none
+		.column-mobile
+			display: block
+
+	.digits
+		width: 100%
+		height: 870px
+		background: url("../img/bg-digits-xs.jpg") no-repeat
+		background-size: 100% 100%
+		.digits-container	
+			display: none
+		.digital-container-mobile
+			display: block
+		.video-text
+			display: none 
+			margin: 0
+			padding: 0
+			margin-bottom: 35px
+			color: white
+			font-size: 40px
+			font-weight: 400
+			line-height: 1em
+			text-transform: uppercase
+		.video-container
+			position: relative
+			width: 550px
+			height: 450px
+			margin: 0 auto
+			iframe
+				display: block
+				width: 100%
+				height: 215px
+			.video-left
+				position: absolute
+				top: 42%
+				left: -386px
+				margin: 0
+				padding: 0
+				color: white
+				font-size: 62px
+				font-weight: 400
+				line-height: 1em
+				transform: rotate(-90deg)
+				text-transform: uppercase
+	
+	.example-questions
+		h1 
+			margin: 30px 0
+			padding: 0 15px
+			font-size: 26px
+		.quest
+			.quest-column-3
+				$padding: 15px
+				padding: 55px $padding 90px $padding
+				.quest-number
+					font-size: 38px
+					margin-bottom: 30px
+					text-align: center
+				.quest-text
+					margin-bottom: 25px
+					font-size: 18px
+					line-height: 22px
+				.discover-answer
+					margin: 0 auto
+					display: block
+					width: 172px
+					height: 49px
+					border: 2px solid white
+					background-color: transparent
+					border-radius: 8px
+					color: white
+					font-size: 22px
+					font-weight: 300
+					text-align: center
+					&:hover
+						background-color: white 
+						color: black
+				.answer
+					display: none
+					min-height: 49px
+					font-size: 18px
+					line-height: 22px
+			.quest-1
+				background: url("../img/quest-bg-1.jpg") no-repeat
+				background-size: 100% 100%
+			.quest-2 
+				background-color: #fcd63c
+			.quest-3
+				background-color: #20b3d5
+		.slick-arrow
+			top: 18% 
+			width: 13px
+			height: 44px
+		.slick-prev
+			left: 20px
+			z-index: 1000
+			background: url("../img/arrow-mobile-left.png") no-repeat
+		.slick-next
+			right: 20px
+			background: url("../img/arrow-mobile-right.png") no-repeat
+		.slick-dots
+			position: absolute
+			bottom: 30px
+			left: 50%
+			transform: translateX(-50%)
+			padding: 0
+			list-style-type: none
+			li 
+				float: left
+				display: block
+				margin-right: 10px
+				&:last-of-type 
+					margin-right: 0
+				button 
+					font-size: 0
+					border: none 
+					outline: none
+					padding: 0
+					width: 13px
+					height: 13px
+					background-color: white
+					border: 3px solid white
+					border-radius: 50%
+			.slick-active
+				button
+					background-color: #e251b6
+
+	.not-miss 
+		padding: 60px 0
+		.decoration-top,
+			display: none 
+		.decoration-bottom
+			bottom: -9px
+			height: 10px
+		h1
+			font-size: 24px
+		.btn-registration
+			width: calc( 100% - 30px )
+			font-size: 26px
+			height: 59px
+			line-height: 56px
+
+	.gallery 
+		.container 
+			font-size: 0
+			$border: 2px 
+			.foto-big
+				display: none
+				width: 100%
+				margin-bottom: 2px
+			.foto-small
+				display: none
+				float: left
+				width: calc( ( 50% - 2px )
+				margin-right: $border 
+				margin-bottom: $border
+			.no-mr 
+				margin-right: 0
+			.no-mr-mobile 
+				margin-right: 0
+			.visible-xs 
+				display: block
+
+	.partners 
+		padding: 60px 0 100px 0
+		h1
+			font-size: 32px
+			margin-bottom: 50px
+
+	.certificate
+		.certificate_left
+			width: 100%
+			padding-top: 65px
+			h1 
+				font-size: 34px
+				margin-bottom: 10px
+				text-align: center
+			h2
+				font-size: 34px
+				margin-bottom: 35px
+				text-align: center
+			p 
+				font-size: 18px
+				line-height: 22px
+				margin-bottom: 20px
+			.price-block 
+				margin-bottom: 45px
+				.price_item
+					.number-text
+						font-size: 16px
+						margin-bottom: 10px
+					.price 
+						font-size: 16px
+			.btn-registration
+				width: 100%
+				font-size: 28px
+				margin-bottom: 70px
+		.certificate_right 
+			display: none 
+		.certificate-img-mobile
+			display: block 
+			width: 100%
+			margin-bottom: 25px
+
+	.enter-team-block 
+		padding: 45px 0
+		.btn-enter-team
+			font-size: 26px
+
+	.statistics
+		padding: 50px 0 70px 0
+		background: url("../img/bg-statistics-xs.jpg") no-repeat
+		background-size: 100% 100%
+		.statistics_left
+			float: left
+			width: 100%
+			text-align: center
+			h1 
+				margin-bottom: 20px
+				color: white
+				font-size: 28px
+			h2 
+				font-size: 110px
+				margin-bottom: 55px
+		.statistics_right
+			float: left
+			width: 100%
+			.game-date-block
+				margin-bottom: 3px
+				.game-date
+					width: 50%
+					padding: 15px 0 
+					p 
+						font-size: 12px
+				.game-result
+					width: 50%
+					padding: 15px 0 
+					p 
+						font-size: 12px
+
+	.modal-enter-team
+		width: 290px
+		height: 290px
+		background: url("../img/bg-enter-team-xs.png") no-repeat
+		background-size: 100% 100%
+		.modal-enter-team-container
+			width: 270px
+			padding-top: 50px
+			.icon-close
+				top: 28px
+				right: -11px
+			h1 
+				font-size: 18px
+				margin-bottom: 20px
+				padding-left: 45px
+			.row-input 
+				width: 100%
+				margin-bottom: 10px
+				&:last-of-type
+					margin-bottom: 25px
+				label 
+					width: 23.5%
+					font-size: 16px
+					padding-left: 20px
+				input[type="text"]
+					width: calc( 58% - 2px - 10px )
+					height: 30px
+					padding: 0 5px
+					font-size: 18px
+			input[type="submit"]
+				width: 58%
+				height: 36px
+				font-size: 20px
+				margin-bottom: 20px
+			.btn-forget-password
+				font-size: 16px
+
+	.modal-registration
+		top: 10%
+		width: 290px
+		height: 271px
+		background: url("../img/modal-registration-xs.png") no-repeat
+		background-size: 100% 100%
+		.modal-registration-container
+			margin: 0 auto
+			width: 175px
+			padding-top: 30px
+			padding-left: 18px
+			.icon-close-registration
+				position: absolute
+				top: 0 
+				right: -30px
+				display: block
+				width: 30px
+				height: 30px
+				background: url("../img/icon-close.png") no-repeat
+				cursor: pointer
+			h1
+				font-size: 16px
+				margin-bottom: 10px
+			.radio-block
+				display: none
+			.row-input
+				text-align: center
+				margin-bottom: 5px
+				&:last-of-type
+					margin-bottom: 10px
+				label 
+					width: 100%
+					display: inline-block
+					vertical-align: top
+					color: white
+					font-size: 14px
+					line-height: 16px
+					font-weight: 400
+				input
+					display: inline-block
+					width: calc( 100% - 10px - 2px )
+					height: 22px
+					padding: 0 5px
+					color: white
+					background-color: #c7379b
+					border-radius: 8px
+					border: 1px solid #c7379b
+					&:focus
+						border: 1px solid #ffdb15
+				label[for="email"]
+					line-height: 16px
+			input[type="submit"]
+				width: 100%
+				height: 30px
+				font-size: 20px
+				line-height: 24px
+
+	.hidden-xs
+		display: none
+	
+	.visible-xs
+		display: block
+
+	.personal-header
+		h1 
+			margin: 50px 0
+			font-size: 32px
+		.team-info-block
+			.team-info_column
+				float: left
+				width: calc( 100%/3 )
+				.team-info__container
+					width: 87px
+					.team-circle
+						height: 87px
+						.info-count
+							padding-top: 25px
+							font-size: 43px
+							span 
+								font-size: 12px
+					.info-text 
+						font-size: 12px
+						margin-top: 15px
+					.third-circle
+						.team-rang 
+							width: 29px
+							height: 27px
+							background-size: 100% 100%
+		.progress-block
+			margin-bottom: 30px
+			.progress_rank
+				.rank-team-left,
+				.rank-team-right
+					font-size: 16px
+					margin-bottom: 10px
+				.rank-team-left
+					padding-left: 15px
+				.rank-team-right
+					padding-right: 15px
+		.table-games
+			$height-td: 45px
+			tr 
+				td:first-child
+					padding-left: 5px
+			.name-column
+				td 
+					font-size: 18px
+			tr:not(.name-column)
+			.game-number
+				font-size: 15px
+				line-height: 1em
+				span 
+					color: #848484
+					font-size: 11px
+					font-weight: 400
+					line-height: 1em
+			.team-place-info
+				font-size: 15px
+				line-height: $height-td
+			.team-points
+				font-size: 18px
+				line-height: $height-td
+			.game-general-img
+				display: inline-block
+				vertical-align: middle
+				width: 20px
+				height: 20px
+
+	.personal-header .progress-block .progress-bar-block .progress-now
+		top: 8px
+		left: 35%
+		font-size: 18px
+	
+	.personal-header .progress-block .progress-bar-block .progress-next
+		top: 8px
+		font-size: 18px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+	.digits .video-text
+		display: block 
+		text-align: center
+	.digits .video-container
+		width: 100%
+		height: auto
+
+	.meeting 	
+		background: url("../img/bg-meeting-xs.jpg") no-repeat
+		background-size: 100% 100%
+		padding: 70px 0 50px
+		.container-content
+			.meeting-text-container
+				width: 100%
+				margin-left: 0
+				h1 
+					font-size: 32px
+					line-height: 36px
+					margin-bottom: 25px
+					padding-left: 30px
+					&:before
+						top: -42px
+						left: 8px
+						width: 43px
+						height: 50px
+						background: url("../img/air-meeting-xs.png") no-repeat
+				p 
+					font-size: 16px
+					line-height: 18px
+
+	.contacts
+		padding: 60px 0 60px 0
+		background: url("../img/bg-contacts-xs.jpg") no-repeat
+		background-size: 100% 100%
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.44)
+		h1 
+			font-size: 32px
+			margin-bottom: 40px
+		.contacts-block
+			width: 100%
+			.contacts_phone
+				float: left
+				margin-bottom: 25px
+				img 
+					padding-left: 25px
+					width: 50px
+					height: 50px
+					background-size: 100% 100%
+				p 
+					margin-left: 15px
+					font-size: 22px
+					line-height: 50px
+			.contacts_email
+				float: left
+				img 
+					padding-left: 25px
+					width: 50px
+					height: 50px
+					background-size: 100% 100%
+				p 
+					margin-left: 15px
+					font-size: 22px
+					line-height: 50px
+		.social-container	
+			.social-block
+				a 
+					width: 49px
+					height: 50px
+					margin-right: 30px
+					.social
+						width: 49px
+						height: 50px
+						background-size: 100% 100%
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
